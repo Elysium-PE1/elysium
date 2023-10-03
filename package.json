@@ -1,0 +1,33 @@
+{
+  "name": "elysium",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@heroicons/react": "^2.0.18",
+    "@knocklabs/node": "^0.4.24",
+    "mongodb": "^6.1.0",
+    "mongoose": "^7.5.3",
+    "next": "13.5.4",
+    "react": "^18",
+    "react-awesome-reveal": "^4.2.5",
+    "react-dom": "^18",
+    "react-hook-form": "^7.47.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "autoprefixer": "^10",
+    "postcss": "^8",
+    "prettier": "3.0.3",
+    "tailwindcss": "^3",
+    "typescript": "^5"
+  }
+}
