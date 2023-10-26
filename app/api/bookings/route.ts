@@ -77,7 +77,7 @@ export async function DELETE(req: Request) {
       return new Response("error occured");
     }
 
-    return new Response(JSON.stringify(tableData));
+    return new Response("Deleted!", { status: 200 });
   } catch (error) {
     console.log(error);
     return new Response("There was some error!", { status: 500 });

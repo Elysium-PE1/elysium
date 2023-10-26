@@ -51,7 +51,13 @@ export async function PUT(req: Request) {
         { upsert: true }
       );
 
-    return new Response(JSON.stringify(table));
+    if (!table) {
+      return new Response("There was some error!", { status: 500 });
+    }
+
+    const tableLeft = await db.collection("tables").findOne({});
+
+    return new Response(JSON.stringify(tableLeft));
   } catch (error) {
     console.log(error);
 
