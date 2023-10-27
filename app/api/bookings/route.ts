@@ -36,7 +36,7 @@ export async function POST(req: Request) {
       .collection("tables")
       .updateOne(
         { _id: new ObjectId("653a67735d68d1265fa2f7f8") },
-        { $set: { tablesLeft: tablesLeft - 2 } },
+        { $set: { tablesLeft: tablesLeft - tables } },
         { upsert: true }
       );
 
