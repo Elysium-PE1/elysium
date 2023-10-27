@@ -4,7 +4,6 @@ import { useState } from "react";
 import { MessageBox } from "./message-box";
 import { useRouter } from "next/navigation";
 import { KnockAPI } from "@/lib/knockapi";
-import { KnockClient } from "@/lib/knockclient";
 
 interface FormInput {
     name: string
@@ -45,7 +44,6 @@ export const BookingForm = () => {
 
     const handleSubmit = () => {
         KnockAPI.setIdentify(userId, formData)
-        KnockClient.getAuth(userId)
         KnockAPI.triggerWorkflow(userId, 'book@elysium', formData)
         setTimeout(() => setShowModel(true), 500)
         setTimeout(() => {
